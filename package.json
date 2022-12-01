@@ -1,0 +1,13 @@
+{
+  "name": "samuraibs-tests",
+  "version": "1.0.0",
+  "description": "testes e2e",
+  "main": "index.js",
+  "author": "Thiago Moreira",
+  "license": "MIT",
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "cypress": "^11.2.0",
+    "pg": "^8.8.0"
+  }
+}
