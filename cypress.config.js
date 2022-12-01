@@ -5,14 +5,8 @@ module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
-
-      const pool = new Pool({
-        host: 'lucky.db.elephantsql.com',
-        user: 'axhozrmj',
-        password: 'kvTKw_ZQnpw-hcVMtgleAOo7c5Gxy7sW',
-        database: 'axhozrmj',
-        port: 5432
-      })
+      
+      const pool = new Pool(config.dbConfig)
       
       on('task', {
         removeUser(email){
@@ -31,6 +25,13 @@ module.exports = defineConfig({
     },
     baseUrl: 'http://localhost:3000',
     viewportHeight: 900,
-    viewportWidth: 1440
+    viewportWidth: 1440,
+    dbConfig: {
+      host: 'lucky.db.elephantsql.com',
+      user: 'axhozrmj',
+      password: 'kvTKw_ZQnpw-hcVMtgleAOo7c5Gxy7sW',
+      database: 'axhozrmj',
+      port: 5432
+    }
   },
 });
