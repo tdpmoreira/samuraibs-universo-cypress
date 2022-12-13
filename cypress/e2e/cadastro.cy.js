@@ -36,18 +36,7 @@ describe('cadastro de usuário', function () {
         }
 
         before(function () {
-            cy.task('removeUser', user.email)
-                .then(function (result) {
-                    console.log(result)
-                })
-
-            cy.request(
-                'POST',
-                'http://localhost:3333/users',
-                user
-            ).then(function (response) {
-                expect(response.status).to.eq(200)
-            })
+            cy.postUser(user)
         })
         it('deve informar que email já está cadastrado', function () {
 
@@ -105,7 +94,7 @@ describe('cadastro de usuário', function () {
         })
     })
 
-    context('deixando campos obrigatórios em branco', function () {
+    context.only('deixando campos obrigatórios em branco', function () {
 
         const alertMessages = [
             'Nome é obrigatório',
@@ -113,13 +102,13 @@ describe('cadastro de usuário', function () {
             'Senha é obrigatória'
         ]
 
-        before(function () {
+        beforeEach(function () {
             signupPage.go()
             signupPage.submit()
         })
 
         alertMessages.forEach(function (alert) {
-            it('deve exibir ' + alert.toLowerCase(), function(){
+            it('deve exibir ' + alert.toLowerCase(), function() {
                 signupPage.alertHaveText(alert)
             })
         })
