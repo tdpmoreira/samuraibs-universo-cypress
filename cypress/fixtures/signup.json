@@ -1,0 +1,23 @@
+{
+  "success": {
+    "name": "Thiago Moreira",
+    "email": "tdamiany@gmail.com",
+    "password": "thigu123"
+  },
+  "email_dup": {
+    "name": "Julien Bauch",
+    "email": "Julien.Bauch@hotmail.com",
+    "password": "thigu123",
+    "is_provider": true
+  },
+  "email_inv": {
+    "name": "Juliano José",
+    "email": "Juliano.jose.hotmail.com",
+    "password": "thigu123"
+  },
+  "short_password": {
+    "name": "Juliano José",
+    "email": "Juliano.jose@hotmail.com",
+    "password": null
+  }
+}
