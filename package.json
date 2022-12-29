@@ -8,6 +8,7 @@
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
     "cypress": "11.2.0",
+    "moment": "^2.29.4",
     "pg": "^8.8.0"
   }
 }

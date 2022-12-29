@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 
 import fpPage from "../support/pages/forgotpass"
+import rpPage from "../support/pages/resetpass"
 
 describe('resgate de senha', function () {
 
@@ -21,7 +22,7 @@ describe('resgate de senha', function () {
       fpPage.form(this.data.email)
       fpPage.submit()
 
-      const message = 'Ocorreu um erro ao tentar realizar a recuperação de senha'
+      const message = 'Enviamos um e-mail para confirmar a recuperação de senha, cheque sua caixa de entrada.'
 
       fpPage.toast.shouldHaveText(message)
     })
@@ -35,7 +36,15 @@ describe('resgate de senha', function () {
     })
 
     it('deve cadastrar a nova senha', function () {
-      console.log('teste')
+      const token = Cypress.env('recoveryToken')
+
+      rpPage.go(token)
+      rpPage.form('abc123', 'abc123')
+      rpPage.submit()
+
+      const message = 'Agora você já pode logar com a sua nova senha secreta.'
+
+      rpPage.toast.shouldHaveText(message)
     })
   })
 })
