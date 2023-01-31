@@ -25,6 +25,7 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 import moment from 'moment'
+//import {defineConfig} from '../../cypress.config.js'
 
 Cypress.Commands.add('postUser', function (user) {
     cy.task('removeUser', user.email)

@@ -40,6 +40,7 @@ module.exports = defineConfig({
 
     },
     baseUrl: 'http://localhost:3000',
+    apiServer: 'http://localhost:3333',
     viewportHeight: 900,
     viewportWidth: 1440,
     dbConfig: {
