@@ -60,14 +60,14 @@ describe('login', function () {
             'jose@'
         ]
 
-        before(function(){
-            loginPage.go()
-        })
+        // before(function(){
+        //     loginPage.go()
+        // })
 
         emails.forEach(function(email){
             it('não deve logar com o email: ' + email, function(){
                 const user = {email: email, password: 'pwd123'}
-                
+                loginPage.go()
                 loginPage.form(user)
                 loginPage.submit()
 
