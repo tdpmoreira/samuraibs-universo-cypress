@@ -51,5 +51,7 @@ module.exports = defineConfig({
       database: 'axhozrmj',
       port: 5432
     }
+    
   },
+  projectId: "vfu4kb",
 });
