@@ -39,10 +39,11 @@ module.exports = defineConfig({
       })
 
     },
-    baseUrl: 'http://localhost:3000',
-    apiServer: 'http://localhost:3333',
+    baseUrl: 'https://samuraibs-web-thigu.fly.dev',
+    apiServer: 'https://samuraibs-api-thigu.fly.dev',
     viewportHeight: 900,
     viewportWidth: 1440,
+    defaultCommandTimeout: 30000,
     dbConfig: {
       host: 'lucky.db.elephantsql.com',
       user: 'axhozrmj',
