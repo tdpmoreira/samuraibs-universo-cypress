@@ -26,7 +26,7 @@ jobs:
           site: https://samuraibs-api-thigu.fly.dev
 
       - name: 'UI Tests - Chrome'
-        uses: cypress-io/github-action@v2 # use the explicit version number
+        uses: cypress-io/github-action@v4.1.0 # use the explicit version number
         with:
           # we have already installed all dependencies above
           install-command: yarn install
